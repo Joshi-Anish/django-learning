@@ -26,7 +26,7 @@ def signup(request):
         email= request.POST.get('email')
         pass1 = request.POST.get('password')
         pass2 = request.POST.get('cpassword') 
-
+        
         myuser = User.objects.create_user(usernames,email,pass1)
         myuser.first_name =fname
         myuser.last_name =lname
